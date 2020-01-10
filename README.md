@@ -27,6 +27,7 @@ mvn spring-boot:run
 * DELETE request to `/api/v1/objects/` deletes all the "objects".
 
 ### The view in the Postman:
+https://localhost:8080
 
  ![alt tag](https://i.imgur.com/wZ2ReJA.png) --> GetAll
  ![alt tag](https://i.imgur.com/EI92hHa.png) --> Put
@@ -34,6 +35,8 @@ mvn spring-boot:run
  ![alt tag](https://i.imgur.com/9CM8tJz.png) --> GetByid
  ![alt tag](https://i.imgur.com/hmyVrzh.png) --> Delete 
 
+### Html 
+https://localhost:8080/messages.html
 
 
 
