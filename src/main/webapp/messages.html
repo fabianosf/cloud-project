@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cloud Message</title>
+<script	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>	
+<!-- <script src="view/app.js"></script>  -->
+<script src="app.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+a {
+	cursor: pointer;
+	background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<div ng-app="app" ng-controller="MessageCRUDCtrl">	
+			<table>
+				<tr>
+					<td width="100">ID:</td>
+					<td><input type="text" id="id" ng-model="message.id" /></td>
+				</tr>
+				<tr>
+					<td width="100">Message:</td>
+					<td><input type="text" id="name" ng-model="message.message"/></td>
+				</tr>				 
+			</table>
+			<br/><br /> 
+			<a ng-click="getMessage(message.id)">Get Message</a> 
+			<a ng-click="updateMessage(message.id,message.message)">Update Message</a> 
+			<a ng-click="addMessage(message.message)">Add Message</a> 
+			<a ng-click="deleteMessage(message.id)">Delete Message</a>
+		<br/><br/>
+		<p style="color: green">{{message}}</p>
+		<p style="color: red">{{errorMessage}}</p>
+
+		<br/>
+		<br/> 
+		<a ng-click="getAllMessages()">Get all Messages</a><br /> 
+		<br/><br/>
+		<div ng-repeat="msg in messages">
+			{{msg.message}}
+		</div>
+	</div>
+</body>
+</html>
