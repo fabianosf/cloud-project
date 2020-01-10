@@ -2,7 +2,6 @@
 
 ### Technology stack:
 
-
 * Spring Boot Web
 * Spring Boot Data Rest
 * Spring Data JPA
@@ -37,6 +36,8 @@ https://localhost:8080
 
 ### Html 
 https://localhost:8080/messages.html
+### Angularjs
+app.js --> controller, and service that will call the REST endpoints.
 
 
 
